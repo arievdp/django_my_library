@@ -118,3 +118,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# import os
+# import json
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# with open(BASE_DIR + '/server/config.json', 'r') as config:
+#     obj = json.load(config)
+# SECRET_KEY = obj["API_KEY"]
