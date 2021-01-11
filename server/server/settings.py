@@ -127,3 +127,9 @@ STATIC_URL = '/static/'
 # with open(BASE_DIR + '/server/config.json', 'r') as config:
 #     obj = json.load(config)
 # SECRET_KEY = obj["API_KEY"]
+
+REST_FRAMEWORK = {
+  'DEFAULT_PERMISSION_CLASSES': [      
+   'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+  ]
+}
