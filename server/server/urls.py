@@ -23,4 +23,4 @@ urlpatterns = [
 
 # Here we import include and create the 'api/books’ pattern which takes in any URLs we created in the api folder. Now the base URL for our books API URLs becomes localhost:8000/api/books. Visiting this URL will match to our r’^/api/books’ pattern. This matches to the r’^$’ pattern we constructed in the books API.
 
-# We use namespace=’api-books’ so that the URLs don’t collide with each other. This would happen if they’re named the same in another app we create. Learn more about why we use namespaces in this thread.
+# We use namespace=’api-books’ so that the URLs don’t collide with each other. This would happen if they’re named the same in another app we create.
