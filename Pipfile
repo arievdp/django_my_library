@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
+djangorestframework = "*"
+markdown = "*"
 
 [requires]
 python_version = "3.7"
