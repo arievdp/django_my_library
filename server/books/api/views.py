@@ -4,7 +4,7 @@ from rest_framework import generics, mixins
 # generics refers to API views that map to your database models - pre built views that provide for common patterns
 # mixin classes provide the actions that are used to provide the basic view behaviour, such as .get() and .post(), destroy and update
 from books.models import Book
-from .serializers import  bookSerializer
+from .serializers import bookSerializer
 class bookAPIView(mixins.CreateModelMixin, generics.ListAPIView):
   # CreateModelMixin - provides .create(request, *args, **kwargs)
   # Returns 201 Create response / 400 Bad Request

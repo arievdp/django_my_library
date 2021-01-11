@@ -13,9 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.urls import include, path
 from django.contrib import admin
-from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/books', include(('books.api.urls', 'books'), namespace='api-books'))
 ]
+
+# Here we import include and create the 'api/books’ pattern which takes in any URLs we created in the api folder. Now the base URL for our books API URLs becomes localhost:8000/api/books. Visiting this URL will match to our r’^/api/books’ pattern. This matches to the r’^$’ pattern we constructed in the books API.
+
+# We use namespace=’api-books’ so that the URLs don’t collide with each other. This would happen if they’re named the same in another app we create. Learn more about why we use namespaces in this thread.
